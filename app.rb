@@ -33,7 +33,14 @@ get '/html' do
   '<h2> some <em>html</em> syntax </h2>'
 end
 
-get '/cat' do
+get '/random_cat' do
   @random_name = ["Amigo", "Oscar", "Viking"].sample
+  erb(:index)
+end
+
+#in browser use querystring ?name:<name>
+get '/named_cat' do
+  p params
+  @random_name = params[:name]
   erb(:index)
 end
