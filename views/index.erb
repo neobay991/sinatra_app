@@ -3,4 +3,15 @@
 <% end %>
 <div style='border: 3px dashed red'>
     <img src='http://bit.ly/1eze8aE'>
-  </div>
+</div>
+</br>
+</br>
+<div>
+  <% if !@random_name %>
+    <p> enter your name: </p>
+    <form action="/named_cat" method="get">
+      <input type="text" name="name">
+      <input type="submit" value="Submit">
+    </form>
+  <% end %>
+</div>
