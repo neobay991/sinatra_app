@@ -4,6 +4,9 @@ require 'sinatra'
 
 # to kill the server. Find the process ID,
 # than in shell type kill <pid>
+
+
+
 puts "This is process #{Process.pid}"
 
 get '/' do
@@ -31,5 +34,6 @@ get '/html' do
 end
 
 get '/cat' do
+  @random_name = ["Amigo", "Oscar", "Viking"].sample
   erb(:index)
 end
